@@ -1,7 +1,8 @@
 # Financial Fairshare Calculator 
 
 ## Pre-requistes
-- VS Code 
+- VS Code
+- Node.js
 
 ## Clone 
 Clone this repository using the following command to a directory you like and open it using VS Code 
