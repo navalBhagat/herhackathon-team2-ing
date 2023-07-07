@@ -1,0 +1,47 @@
+version: '3'
+
+volumes: 
+  postgres_data:
+    driver: local
+  mysql_data:
+    driver: local  
+
+services:
+  mysql:
+    container_name: mysql8
+    image: mysql:8.0.33
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - $PWD/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      MYSQL_DATABASE: fairshare
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - 3306:3306
+  postgres:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: password
+    ports:
+       - 5434:5434  
+  keycloak:
+    image: quay.io/keycloak/keycloak:21.1.1
+    command: start-dev
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_DATABASE: keycloak
+      DB_USER: keycloak
+      DB_SCHEMA: public
+      DB_PASSWORD: password
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: password
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres	
