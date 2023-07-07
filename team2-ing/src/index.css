@@ -5,9 +5,109 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightgray;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App { 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header { 
+  font-size: xx-large;
+  background-color: #f60;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer { 
+  background-color: #f60;
+  min-height: 5rem;
+  margin-top: auto;
+}
+
+.headerValue {
+  color: white;
+  text-align: center;
+  margin-left: 2rem;
+}
+
+.footerValue {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.signup-form {
+  background-color: #091c5a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 20rem;
+  max-width: 20rem;
+  margin: 15vh;
+  margin-left: 85vh;
+  padding: 1rem;
+}
+
+.title { 
+  font-size: large;
+  font-weight: 700;
+}
+
+.email { 
+  display: flex;
+  flex-direction: column;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+.Email-label {
+  padding-bottom: 10px;
+}
+
+.Email-input { 
+  border-radius: 5px;
+  border: 1px solid;
+  min-height: 2rem;
+}
+
+.Pass-label {
+  padding-bottom: 10px;
+}
+
+.Pass-input { 
+  border-radius: 5px;
+  border: 1px solid; 
+  min-height: 2rem;
+}
+
+.submit { 
+  max-width: 10rem;
+  min-height: 2rem;
+  color: white;
+  background-color: #f60;
+  border: 0px;
+  border-radius: 2px;
+}
+
+.submit:hover {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.registered { 
+  color:#091c5a;
+  font-size: xx-large;
+  text-align: center;
 }
