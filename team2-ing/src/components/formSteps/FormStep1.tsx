@@ -22,7 +22,6 @@ export const FormStep1: React.FC<Props> = (props) => {
                     <label form="partner1-name" className="partner1-name">
                         What is your name? (partner 1)
                     </label>
-                    <span className="formdivider" />
                     <input
                         type="text"
                         name="partner1-name"
