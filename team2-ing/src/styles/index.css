@@ -266,13 +266,33 @@ h2.welcome {
 .input-text.household-travel,
 .input-text.household-transportation,
 .input-text.household-utilities,
-.input-text.household-leisure {
+.input-text.household-leisure,
+.input-text.relationship-status,
+.input-text.relationship-rent,
+.input-text.relationship-insurance,
+.input-text.relationship-net,
+.input-text.relationship-work_hours,
+.input-text.relationship-tax_class,
+.input-text.relationship-saving,
+.input-text.relationship-debts,
+.input-text.pension-points,
+.input-text.pension-access,
+.input-text.pension-value,
+.input-text.pension-factor {
   flex-direction: column;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 .input-text.household {
+  flex-direction: column;
+}
+
+.input-text.relationship {
+  flex-direction: column;
+}
+
+.input-text.pension {
   flex-direction: column;
 }
 
@@ -300,7 +320,19 @@ input#household-groceries,
 input#household-travel,
 input#household-transportation,
 input#household-utilities,
-input#household-leisure {
+input#household-leisure,
+input#relationship-status,
+input#relationship-rent,
+input#relationship-insurance,
+input#relationship-net,
+input#relationship-work_hours,
+input#relationship-tax_class,
+input#relationship-saving,
+input#relationship-debts,
+input#pension-points,
+input#pension-access,
+input#pension-value,
+input#pension-factor {
   border-radius: 5px;
   min-height: 20px;
   max-width: 100px;
