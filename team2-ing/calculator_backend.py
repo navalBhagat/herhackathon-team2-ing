@@ -1,8 +1,44 @@
+import sys
+import pandas as pd
+import numpy as np
+
 class User:
-    def __init__(self, param1, param2):
-        self.param1 = param1
-        self.param2 = param2
+    def __init__(self, params):
+        self.rel_status = params[0]
+        self.rent = params[1]
+        self.salary = params[2]
+        self.working_hours = params[3]
+        self.tax_class = params[4]
+        self.earning_points = params[5]
+        self.access_factor = params[6]
+        self.pension_value = params[7]
+        self.pension_factor = params[8]
+        self.caring_hours_child = params[9]
+        self.external_caring_hours_child = params[10]
+        self.spending_external_care_child = params[11]
+        self.parental_leave_duration = params[12]
+        self.parental_leave_start = params[13]
+        self.child_benefits = params[14]
+        self.caring_hours_other = params[15]
+        self.external_caring_hours_other = params[16]
+        self.spending_external_care_other = params[17]
+        self.household_hours = params[18]
+        self.groceries = params[19]
+        self.travel = params[20]
+        self.transportation = params[21]
+        self.bills = params[22]
+        self.leisure = params[23]
+        self.mental_load = params[24]
+        self.preferences_work = params[25]
+        self.preferences_pension = params[26]
+        self.preferences_care = params[27]
+        
+        
+    def pension(self):
+        self.pension = self.earning_points*self.access_factor*self.pension_value*self.pension_factor
     
+    def diff_pension(self, other_instance):
+        
     def my_function(self):
         print("Param1:", self.param1)
         print("Param2:", self.param2)
@@ -18,24 +54,19 @@ class User:
         else:
             print("Both instances have the same sum of parameters.")
 
+user_ID = sys.argv[1]
+user_ID = 1
+
 
 # Read input from a file    - we can do this differently
-with open('user_X_p1.txt', 'r') as file:
-    lines = file.readlines()
-    param1_input = lines[0].strip()
-    param2_input = lines[1].strip()
+User_input = pd.read_csv(str(user_ID)+'.csv', header=None,skiprows=1,dtype=object)
 
+User_input = User_input.T
+info_p1 = User_input[0].to_numpy()
+info_p2 = User_input[1].to_numpy()
 # Create an instance of MyClass with the input values
-partner1 = User(param1_input, param2_input)
-
-# Read different input from a file
-with open('user_X_p2.txt', 'r') as file:
-    lines = file.readlines()
-    param1_input = lines[0].strip()
-    param2_input = lines[1].strip()
-
-# Create another instance of MyClass with different input values
-partner2 = MyClass(param1_input, param2_input)
+partner1 = User(info_p1)
+partner2 = User(info_p2)
 
 # Call the function on the instances
 partner1.my_function()
