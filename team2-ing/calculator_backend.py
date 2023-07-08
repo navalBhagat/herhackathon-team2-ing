@@ -4,41 +4,47 @@ import numpy as np
 
 class User:
     def __init__(self, params):
-        self.rel_status = params[0]
-        self.rent = params[1]
-        self.salary = params[2]
-        self.working_hours = params[3]
-        self.tax_class = params[4]
-        self.earning_points = params[5]
-        self.access_factor = params[6]
-        self.pension_value = params[7]
-        self.pension_factor = params[8]
-        self.caring_hours_child = params[9]
-        self.external_caring_hours_child = params[10]
-        self.spending_external_care_child = params[11]
-        self.parental_leave_duration = params[12]
-        self.parental_leave_start = params[13]
-        self.child_benefits = params[14]
-        self.caring_hours_other = params[15]
-        self.external_caring_hours_other = params[16]
-        self.spending_external_care_other = params[17]
-        self.household_hours = params[18]
-        self.groceries = params[19]
-        self.travel = params[20]
-        self.transportation = params[21]
-        self.bills = params[22]
-        self.leisure = params[23]
-        self.mental_load = params[24]
-        self.preferences_work = params[25]
-        self.preferences_pension = params[26]
-        self.preferences_care = params[27]
+        self.timestep = params[0]
+        self.rel_status = params[1]
+        self.rent = params[2]
+        self.salary = params[3]
+        self.working_hours = params[4]
+        self.tax_class = params[5]
+        self.earning_points = params[6]
+        self.access_factor = params[7]
+        self.pension_value = params[8]
+        self.pension_factor = params[9]
+        self.caring_hours_child = params[10]
+        self.external_caring_hours_child = params[11]
+        self.spending_external_care_child = params[12]
+        self.parental_leave_duration = params[13]
+        self.parental_leave_start = params[14]
+        self.child_benefits = params[15]
+        self.caring_hours_other = params[16]
+        self.external_caring_hours_other = params[17]
+        self.spending_external_care_other = params[18]
+        self.household_hours = params[19]
+        self.groceries = params[20]
+        self.travel = params[21]
+        self.transportation = params[22]
+        self.bills = params[23]
+        self.leisure = params[24]
+        self.mental_load = params[25]
+        self.preferences_work = params[26]
+        self.preferences_pension = params[27]
+        self.preferences_care = params[28]
         
         
     def pension(self):
         self.pension = self.earning_points*self.access_factor*self.pension_value*self.pension_factor
     
     def diff_pension(self, other_instance):
-        
+        return(self.pension-other_instance.pension)
+
+    def comp_pension(self):
+        min_pension = 11000
+
+
     def my_function(self):
         print("Param1:", self.param1)
         print("Param2:", self.param2)
