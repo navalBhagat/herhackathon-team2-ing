@@ -1,11 +1,7 @@
 import React from "react";
-import "../../my_styles/StepForm5.css"
+import "../../styles/StepForm5.css"
 
-interface Props {
-    onPrevious: () => void;
-}
-
-export const FormStep5: React.FC<Props> = (props) => {
+export const FormStep5: React.FC = () => {
     return (
         <div className="form" style={{ marginTop: '12em' }}>
             <h2 className="center">
