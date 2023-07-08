@@ -140,3 +140,61 @@ h2 {
   color:#f60;
   margin-left: 10rem;
 }
+
+.buttons { 
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5rem;
+}
+
+.nextbutton { 
+  color: white;
+  min-height: 50px;
+  min-width: 100px;
+  background-color: #091c5a;
+  font-size: medium;
+}
+
+.nextbutton:hover { 
+  font-size: large;
+}
+
+.backbutton { 
+  color: white;
+  min-height: 50px;
+  min-width: 100px;
+  background-color: #091c5a;
+  font-size: medium;
+}
+
+.backbutton:hover { 
+  font-size: large;
+}
+
+.formSubmit { 
+  color: white;
+  min-height: 50px;
+  min-width: 100px;
+  background-color: #f60;
+  font-size: medium;
+  margin-left: 2.5rem;
+}
+
+.formSubmit:hover {
+  font-style: italic;
+  font-size: large;
+}
+
+.longdivider { 
+  border: 5px solid #f60;
+  background-color: #f60;
+  height: 5px;
+  width: 80% 
+}
+
+hr { 
+  height: 10px;
+  background-color: #f60;
+  max-width: 80%;
+  border-color: #f60;
+}
