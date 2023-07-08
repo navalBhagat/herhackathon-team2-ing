@@ -17,7 +17,7 @@ export const FormStep4: React.FC<Props> = (props) => {
                     Continue
                 </button>
             </div>
-            <h2>MENTAL LOAD</h2>
+            <h2>Mental Load</h2>
             <hr />
             <p className="myText">
                 The mental load is a term for the invisible labor involved in managing a household and family. Also sometimes referred to as "worry work" or "cognitive labor," the mental load is about not the physical tasks but rather the overseeing of those tasks.
@@ -39,6 +39,12 @@ export const FormStep4: React.FC<Props> = (props) => {
                     />
                 </div>
             </div>
+            <br />
+            <h2>Personal Preferences</h2>
+            <hr />
+            {/*<p className="myText">*/}
+            {/*    The mental load is a term for the invisible labor involved in managing a household and family. Also sometimes referred to as "worry work" or "cognitive labor," the mental load is about not the physical tasks but rather the overseeing of those tasks.*/}
+            {/*</p>*/}
         </div>
     );
 };
