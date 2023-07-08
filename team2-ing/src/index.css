@@ -14,8 +14,8 @@ body {
   height: 100%;
 }
 
-#root { 
- height: 100%;
+#root {
+  height: 100%;
 }
 
 code {
@@ -23,20 +23,20 @@ code {
     monospace;
 }
 
-.App { 
+.App {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-.mainwrapper { 
+.mainwrapper {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.header { 
+.header {
   font-size: xx-large;
   background-color: #f60;
   min-height: 5rem;
@@ -45,7 +45,7 @@ code {
   justify-content: space-evenly;
 }
 
-.footer { 
+.footer {
   background-color: #f60;
   min-height: 5rem;
   margin-top: auto;
@@ -74,12 +74,12 @@ code {
   padding: 1rem;
 }
 
-.title { 
+.title {
   font-size: large;
   font-weight: 700;
 }
 
-.email { 
+.email {
   display: flex;
   flex-direction: column;
 }
@@ -93,7 +93,7 @@ code {
   padding-bottom: 10px;
 }
 
-.Email-input { 
+.Email-input {
   border-radius: 5px;
   border: 1px solid;
   min-height: 2rem;
@@ -103,13 +103,13 @@ code {
   padding-bottom: 10px;
 }
 
-.Pass-input { 
+.Pass-input {
   border-radius: 5px;
-  border: 1px solid; 
+  border: 1px solid;
   min-height: 2rem;
 }
 
-.submit { 
+.submit {
   max-width: 10rem;
   min-height: 2rem;
   color: white;
@@ -123,23 +123,23 @@ code {
   font-weight: 700;
 }
 
-.registered { 
-  color:#091c5a;
+.registered {
+  color: #091c5a;
   font-size: xx-large;
   text-align: center;
 }
 
-nav { 
+nav {
   font-size: large;
 }
 
-.divider { 
+.divider {
   width: 100%;
   background-color: #091c5a;
   margin: 10px;
 }
 
-.description { 
+.description {
   color: #091c5a;
   font-size: x-large;
   text-align: center;
@@ -148,23 +148,23 @@ nav {
   font-weight: 800;
 }
 
-.Home { 
+.Home {
   display: flex;
   flex-direction: column;
 }
 
-h2 { 
-  color:#f60;
+h2 {
+  color: #f60;
   margin-left: 10rem;
 }
 
-.buttons { 
+.buttons {
   display: flex;
   justify-content: space-between;
   margin: 2.5rem;
 }
 
-.nextbutton { 
+.nextbutton {
   color: white;
   min-height: 50px;
   min-width: 100px;
@@ -172,11 +172,11 @@ h2 {
   font-size: medium;
 }
 
-.nextbutton:hover { 
+.nextbutton:hover {
   font-size: large;
 }
 
-.backbutton { 
+.backbutton {
   color: white;
   min-height: 50px;
   min-width: 100px;
@@ -184,11 +184,11 @@ h2 {
   font-size: medium;
 }
 
-.backbutton:hover { 
+.backbutton:hover {
   font-size: large;
 }
 
-.formSubmit { 
+.formSubmit {
   color: white;
   min-height: 50px;
   min-width: 100px;
@@ -202,36 +202,37 @@ h2 {
   font-size: large;
 }
 
-.longdivider { 
+.longdivider {
   border: 5px solid #f60;
   background-color: #f60;
   height: 5px;
-  width: 80% 
+  width: 80%
 }
 
-hr { 
+hr {
   height: 10px;
   background-color: #f60;
   max-width: 80%;
   border-color: #f60;
 }
 
-h2.welcome { 
+h2.welcome {
   font-size: xx-large;
   margin-left: 25rem;
 }
 
-.inputfields { 
+.inputfields {
   color: black;
   font-size: x-large;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.input-text { 
+.input-text {
   display: flex;
   justify-content: space-between;
+  color: black;
 }
 
 .formdivider {
@@ -239,9 +240,61 @@ h2.welcome {
   margin: 10px;
 }
 
-.input-text input { 
+.input-text input {
   border-radius: 5px;
   min-height: 20px;
   border-color: gray;
   font-size: medium;
+}
+
+.input-text.childcare,
+.input-text.parental-leave,
+.input-text.benefits,
+.input-text.unpaid-care,
+.input-text.household-hours,
+.input-text.household-groceries,
+.input-text.household-travel,
+.input-text.household-transportation,
+.input-text.household-utilities,
+.input-text.household-leisure {
+  flex-direction: column;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.input-text.household {
+  flex-direction: column;
+}
+
+.form3 {
+  font-size: large;
+  margin-left: 10rem;
+}
+
+text.question {
+  margin-top: 10px;
+}
+
+input#childcare-hours,
+input#childcare-hours-external,
+input#childcare-hours-external-amount,
+input#parental-leave-months,
+input#parental-leave-date,
+input#benefits,
+input#unpaid-care-weekly-hours,
+input#unpaid-care-external,
+input#unpaid-care-external-amount,
+input#unpaid-care-benefits,
+input#household-hours,
+input#household-groceries,
+input#household-travel,
+input#household-transportation,
+input#household-utilities,
+input#household-leisure {
+  border-radius: 5px;
+  min-height: 20px;
+  max-width: 100px;
+  border-color: gray;
+  font-size: medium;
+  margin-bottom: 5px;
 }
