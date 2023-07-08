@@ -188,13 +188,23 @@ h2 {
   font-size: large;
 }
 
+.formSubmitContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 7rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    border: 0px;
+}
+
 .formSubmit {
   color: white;
   min-height: 50px;
   min-width: 100px;
   background-color: #f60;
   font-size: medium;
-  margin-left: 2.5rem;
+  border-radius: 10px;
+  border: 0px;
 }
 
 .formSubmit:hover {

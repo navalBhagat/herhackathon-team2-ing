@@ -5,12 +5,8 @@ export const Navbar = () => {
     const { loggedIn, setLoggedIn } = useContext(UserContext);
     return (
         <nav>
-            <a href="/">Home</a>
-            {(loggedIn || window.location.href.includes("calculator")) && (
+            {(loggedIn || window.location.href.includes("calculator") || window.location.href.includes("overview")) && (
                 <>
-                    <span className="divider" />
-                    <a href="/calculator">Calculator</a>
-                    <span className="divider" />
                     <a href="/" onClick={() => {setLoggedIn(false)}}>Logout</a>
                 </>
             )}
