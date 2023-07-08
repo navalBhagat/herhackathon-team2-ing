@@ -7,7 +7,7 @@ type Props = {
 
 export const Wrapper: React.FC<Props> = (props) => {
   return (
-    <div>
+    <div className="mainwrapper">
         <Header /> 
         {props.children}
         <Footer />
