@@ -1,19 +1,18 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "../../services/UserService";
 
 export const SignUp = () => {
-    const [submit, setSubmit] = useState(false);
+    const { loggedIn, setLoggedIn } = useContext(UserContext);
 
     const handleSubmit = () => {
-        if (!submit) {
-            setSubmit(true);
-        }
+        setLoggedIn(true);
     };
 
-    if (!submit) {
+    if (!loggedIn) {
         return (
             <div>
                 <form onSubmit={handleSubmit} className="signup-form">
-                    <div className="title">Sign Up</div>
+                    <div className="title">Login</div>
                     <div className="email">
                         <label form="email" className="Email-label">
                             Email
@@ -23,27 +22,33 @@ export const SignUp = () => {
                             id="email"
                             name="email"
                             className="Email-input"
+                            required
                         ></input>
                     </div>
                     <br />
                     <div className="password">
-                    <label form="password" className="Pass-label">
-                        Password
-                    </label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        className="Pass-input"
-                    ></input>
+                        <label form="password" className="Pass-label">
+                            Password
+                        </label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            className="Pass-input"
+                            required
+                        ></input>
                     </div>
                     <br />
-                    <input type="submit" value="Sign Up" className="submit" />
+                    <input type="submit" value="Login" className="submit" />
                     <br />
                 </form>
             </div>
         );
     } else {
-        return <div className="registered">Registered!</div>;
+        return (
+            <>
+                <div className="registered">Registered!</div>
+            </>
+        );
     }
 };
