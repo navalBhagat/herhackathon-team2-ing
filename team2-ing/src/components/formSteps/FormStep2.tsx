@@ -16,7 +16,7 @@ export const FormStep2: React.FC<Props> = (props) => {
                     Continue
                 </button>
             </div>
-            <h2>Financial Information 2</h2>
+            <h2>FINANCIAL INFORMATION</h2>
             <hr />
             <h2 className="Shared Info" >
                 Shared Information
