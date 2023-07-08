@@ -26,6 +26,7 @@ code {
   min-height: 5rem;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .footer { 
@@ -110,4 +111,14 @@ code {
   color:#091c5a;
   font-size: xx-large;
   text-align: center;
+}
+
+nav { 
+  font-size: large;
+}
+
+.divider { 
+  width: 100%;
+  background-color: #091c5a;
+  margin: 10px;
 }
