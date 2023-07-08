@@ -1,5 +1,7 @@
 import "../../my_styles/StepForm4.css";
 import { Preferences } from "./formStep4/preferences"
+import React from "react";
+
 
 interface Props {
     onNext: () => void;

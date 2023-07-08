@@ -120,8 +120,8 @@ class User:
             date2 = datetime.strptime(self.timestep, '%Y-%m-%d')
             date1 = datetime.strptime(self.parental_leave_start, '%Y-%m-%d')
             time_passed = (date2.year - date1.year) * 12 + (date2.month - date1.month)
-            print(time_passed)
-            print(self.parental_leave_duration)
+            #print(time_passed)
+            #print(self.parental_leave_duration)
             if self.parental_leave_duration <= 12:
                 self.parental_wage = 0.65*self.salary*self.parental_leave_duration
             else:
@@ -131,8 +131,27 @@ class User:
             self.income_overview = (self.salary*time_no_parental_leave + self.parental_wage)/time_passed
             self.income_overview_plus_care = (self.salary*time_no_parental_leave+self.parental_wage)/time_passed + self.total_care_wage
             self.income_overview_plus_care_household = (self.salary*time_no_parental_leave+self.parental_wage)/time_passed + self.total_care_wage +self.household_hours*minimum_wage
-        print(self.salary,self.income_overview)
+        #print(self.salary,self.income_overview)
     
+    def equality_score(self,other_instance):
+        total_care_p1 = self.caring_hours_child+self.caring_hours_other+self.household_hours
+        total_care_p2 = other_instance.caring_hours_child+other_instance.caring_hours_other+other_instance.household_hours
+        dif_care = np.abs(total_care_p1-total_care_p2)
+        dif_salary = np.abs(self.salary - other_instance.salary)
+        dif_mental = np.abs(self.mental_load-other_instance.mental_load)
+        max_mental = 216
+        max_sal = 6000
+        max_care = 300
+        norm_care = dif_care/max_care
+        norm_sal = dif_salary/max_sal
+        norm_mental = dif_mental/max_mental
+        self.score = norm_care*5+norm_sal*5+norm_mental*5
+        if self.score <=5:
+            self.equal_traffic_light == 'green'
+        elif self.score > 5 and self.score <= 10:
+            self.equal_traffic_light == 'yellow'
+        else:
+            self.equal_traffic_light == 'red'
 
     def half_half_model(self,other_instance):
         total_work = self.working_hours + other_instance.working_hours
@@ -157,6 +176,7 @@ class User:
         plt.savefig(str(user_ID)+'hours-half-half.png')
         plt.clf()
         
+    
 
     def create_grids(self,other_instance):
         hourly_p1 = self.hourly_wage
