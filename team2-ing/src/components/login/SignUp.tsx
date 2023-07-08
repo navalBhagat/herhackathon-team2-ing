@@ -1,11 +1,14 @@
 import { useContext } from "react";
 import { UserContext } from "../../services/UserService";
+import { useNavigate } from "react-router-dom";
 
 export const SignUp = () => {
+    const navigate = useNavigate();
     const { loggedIn, setLoggedIn } = useContext(UserContext);
 
     const handleSubmit = () => {
         setLoggedIn(true);
+        navigate('/calculator')
     };
 
     if (!loggedIn) {

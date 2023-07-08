@@ -23,9 +23,9 @@ export const Calculator = () => {
                     <FormStep3 onNext={handleNext} onPrevious={handlePrev} />
                 )}
                 {step === 4 && (
-                    <FormStep4 onNext={handleNext} onPrevious={handlePrev} />
+                    <FormStep4 onPrevious={handlePrev} onNext={handleNext}/>
                 )}
-                {step === 5 && <FormStep5 onPrevious={handlePrev} />}
+                {step === 5 && <FormStep5 />}
             </div>
         </form>
     );

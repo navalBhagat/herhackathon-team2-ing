@@ -1,20 +1,21 @@
 import React from "react";
-import "../../my_styles/StepForm5.css"
+import "../../styles/StepForm5.css";
 
-interface Props {
-    onPrevious: () => void;
-}
-
-export const FormStep5: React.FC<Props> = (props) => {
+export const FormStep5: React.FC = () => {
     return (
-        <div className="form" style={{ marginTop: '12em' }}>
-            <h2 className="center">
-                THANKS FOR YOUR INPUTS!
-            </h2>
+        <div className="form" style={{ marginTop: "12em" }}>
+            <h2 className="center">THANKS FOR YOUR INPUTS!</h2>
             <h2 className="black_center">
-                We are now processing your data<br />
+                We are now processing your data
+                <br />
                 and creating your digital twin
             </h2>
+            <div className="overviewlink">
+                <a href="/overview" className="">
+                    {" "}
+                    Go to Overview, now!
+                </a>
+            </div>
         </div>
     );
 };

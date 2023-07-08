@@ -1,6 +1,6 @@
 import { Wrapper } from "./components";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Calculator, Home } from "./pages";
+import { Calculator, Home, Overview } from "./pages";
 import { LoggedInProvider } from "./services/UserService";
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
                                 path="/calculator"
                                 element={<Calculator />}
                             />
+                            <Route path="/overview" element={<Overview />} />
                         </Routes>
                     </Router>
                 </Wrapper>
