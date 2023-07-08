@@ -1,4 +1,4 @@
-import { FormStep1, FormStep2, FormStep3, FormStep5 } from "../components";
+import { FormStep1, FormStep2, FormStep3, FormStep4, FormStep5 } from "../components";
 import { useState } from "react";
 
 export const Calculator = () => {
@@ -22,7 +22,10 @@ export const Calculator = () => {
                 {step === 3 && (
                     <FormStep3 onNext={handleNext} onPrevious={handlePrev} />
                 )}
-                {step === 4 && <FormStep5 onPrevious={handlePrev} />}
+                {step === 4 && (
+                    <FormStep4 onNext={handleNext} onPrevious={handlePrev} />
+                )}
+                {step === 5 && <FormStep5 onPrevious={handlePrev} />}
             </div>
         </form>
     );
