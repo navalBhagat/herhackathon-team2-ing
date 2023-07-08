@@ -1,5 +1,5 @@
 import React from "react";
-import "../../my_styles/StepForm4.css";
+// import "../../my_styles/StepForm4.css";
 
 interface Props {
     onNext: () => void;
