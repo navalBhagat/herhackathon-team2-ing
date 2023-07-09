@@ -189,12 +189,12 @@ h2 {
 }
 
 .formSubmitContainer {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 7rem;
-    margin-bottom: 0.5rem;
-    border-radius: 10px;
-    border: 0px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 7rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  border: 0px;
 }
 
 .formSubmit {
@@ -266,13 +266,33 @@ h2.welcome {
 .input-text.household-travel,
 .input-text.household-transportation,
 .input-text.household-utilities,
-.input-text.household-leisure {
+.input-text.household-leisure,
+.input-text.relationship-status,
+.input-text.relationship-rent,
+.input-text.relationship-insurance,
+.input-text.relationship-net,
+.input-text.relationship-work_hours,
+.input-text.relationship-tax_class,
+.input-text.relationship-saving,
+.input-text.relationship-debts,
+.input-text.pension-points,
+.input-text.pension-access,
+.input-text.pension-value,
+.input-text.pension-factor {
   flex-direction: column;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 .input-text.household {
+  flex-direction: column;
+}
+
+.input-text.relationship {
+  flex-direction: column;
+}
+
+.input-text.pension {
   flex-direction: column;
 }
 
@@ -300,11 +320,144 @@ input#household-groceries,
 input#household-travel,
 input#household-transportation,
 input#household-utilities,
-input#household-leisure {
+input#household-leisure,
+input#relationship-status,
+input#relationship-rent,
+input#relationship-insurance,
+input#relationship-net,
+input#relationship-work_hours,
+input#relationship-tax_class,
+input#relationship-saving,
+input#relationship-debts,
+input#pension-points,
+input#pension-access,
+input#pension-value,
+input#pension-factor {
   border-radius: 5px;
   min-height: 20px;
   max-width: 100px;
   border-color: gray;
   font-size: medium;
   margin-bottom: 5px;
+}
+
+.overviewlink {
+  font-size: x-large;
+  font-style: italic;
+  text-align: center;
+  align-items: center;
+}
+
+.pictures {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: left;
+  margin-left: 10rem;
+  margin-bottom: 5rem;
+}
+
+.picture-title {
+  color: black;
+  font-size: large;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.image {
+  height: 400px;
+  width: auto;
+}
+
+.result-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.result-type {
+  margin-right: 10rem;
+  margin-top: 1.3rem;
+}
+
+.result-type-button {
+  height: 30px;
+  color: white;
+  background-color: #091c5a;
+}
+
+.result-title {
+  color: black;
+  font-size: x-large;
+  font-weight: 700;
+  margin-left: 10rem;
+}
+
+.result-type-container {
+  color: black;
+  margin-left: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.result-type-image {
+  width: 100px;
+  height: auto;
+}
+
+.result-type-text {
+  font-size: large;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.text-overview {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+.text-overview-title {
+  font-size: large;
+  font-weight: 700;
+}
+
+.text-overview-description {
+  font-size: medium;
+  font-weight: 500;
+}
+
+.hint-image { 
+  margin-left: 10rem;
+  margin-bottom: 3rem;
+}
+
+.hint {
+  display: flex;
+  justify-content: center;
+}
+
+.hint .text-overview {
+  margin-left: 3rem
+}
+
+.text-picture .picture-container { 
+  margin-left: 10rem;
+  margin-bottom: 5rem;
+}
+
+.text-picture .picture-container .image { 
+  height: 40rem;
+}
+
+.bye {
+  color: black;
+  text-align: center;
+  margin-left: 25.3rem;
+  font-style: italic ;
 }

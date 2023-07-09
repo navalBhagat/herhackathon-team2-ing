@@ -4,6 +4,7 @@ import React from "react";
 
 interface Props {
     onPrevious: () => void;
+    onNext: () => void;
 }
 
 export const FormStep4: React.FC<Props> = (props) => {
@@ -54,7 +55,7 @@ export const FormStep4: React.FC<Props> = (props) => {
             <br />
             <br />
             <div className="formSubmitContainer">
-                <input type="submit" value="Submit" className="formSubmit" />
+                <button onClick={props.onNext} className="formSubmit">Submit</button>
             </div>
         </div>
     );

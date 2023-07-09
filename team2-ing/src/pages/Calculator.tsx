@@ -1,9 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import { FormStep1, FormStep2, FormStep3, FormStep4, FormStep5 } from "../components";
 import { useState } from "react";
 
 export const Calculator = () => {
-    const navigate = useNavigate();
     const [step, setStep] = useState(1);
 
     const handleNext = () => {
@@ -14,12 +12,8 @@ export const Calculator = () => {
         setStep((prevStep: number) => prevStep - 1);
     };
 
-    const handleSubmit = () => {
-        navigate('/overview');
-    }
-
     return (
-        <form onSubmit={handleSubmit}>
+        <form>
             <div className="Calculator">
                 {step === 1 && <FormStep1 onNext={handleNext} />}
                 {step === 2 && (
@@ -29,7 +23,7 @@ export const Calculator = () => {
                     <FormStep3 onNext={handleNext} onPrevious={handlePrev} />
                 )}
                 {step === 4 && (
-                    <FormStep4 onPrevious={handlePrev}/>
+                    <FormStep4 onPrevious={handlePrev} onNext={handleNext}/>
                 )}
                 {step === 5 && <FormStep5 />}
             </div>
